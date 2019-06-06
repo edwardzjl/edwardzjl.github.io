@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>vim 8.0 剪切板设置 | Gridea</title>
+<link rel="shortcut icon" href="https://edwardzjl.github.io//favicon.ico?v=1559819498575">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://edwardzjl.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://edwardzjl.github.io/">
+  <img class="avatar" src="https://edwardzjl.github.io//images/avatar.png?v=1559819498575" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              vim 8.0 剪切板设置
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-03-14 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>通过 ubuntu 和 centos 的源安装的 vim 版本较老（好像是7.4.x）</p>
+<p>8.0 之后的 vim，官网推荐的安装方式是从 git clone 源码编译</p>
+<!-- more -->
+<p>默认编译出来的 vim 是没有 clipboard support 的，无法通过寄存器与系统剪切板进行交互</p>
+<p>在编译时增加 clip board support 需要的最小依赖为 xorg header files 和 x11 dbus</p>
+<p>在 https://packages.ubuntu.com/ 里一通搜索发现 header files 是在 libx11-dev 这个包里，而 x11 dbus 在 dbus-x11</p>
+<p>因此整个编译过程如下：</p>
+<pre><code class="language-bash">sudo apt-get install libx11-dev dbus-x11
+./configure --with-features=huge
+make
+sudo make install
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://edwardzjl.github.io//post/hello-gridea">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '41baecfa03f7b355e235',
+    clientSecret: 'a87fa68869b6dbd1f687c814179e50dca2b8c94b',
+    repo: 'edwardzjl.github.io',
+    owner: 'edwardzjl',
+    admin: ['edwardzjl'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://edwardzjl.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
