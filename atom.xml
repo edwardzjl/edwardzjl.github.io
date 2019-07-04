@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://edwardzjl.github.io/</id>
     <title>Gridea</title>
-    <updated>2019-06-06T11:17:56.596Z</updated>
+    <updated>2019-07-04T09:57:50.541Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://edwardzjl.github.io/"/>
     <link rel="self" href="https://edwardzjl.github.io//atom.xml"/>
@@ -10,6 +10,58 @@
     <logo>https://edwardzjl.github.io//images/avatar.png</logo>
     <icon>https://edwardzjl.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[系统中状态为 static 的服务]]></title>
+        <id>https://edwardzjl.github.io//post/xi-tong-zhong-zhuang-tai-wei-static-de-fu-wu</id>
+        <link href="https://edwardzjl.github.io//post/xi-tong-zhong-zhuang-tai-wei-static-de-fu-wu">
+        </link>
+        <updated>2019-07-04T05:22:15.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近开始接触 Linux 运维的工作，第一件事情就是看看系统中跑了多少服务。</p>
+<p>集群用的是 CentOS 7，可以通过 <code>bash systemctl list-unit-files</code> 这个命令查看所有服务，敲下回车后打印出来这么一堆玩应儿：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近开始接触 Linux 运维的工作，第一件事情就是看看系统中跑了多少服务。</p>
+<p>集群用的是 CentOS 7，可以通过 <code>bash systemctl list-unit-files</code> 这个命令查看所有服务，敲下回车后打印出来这么一堆玩应儿：</p>
+<!-- more -->
+<p><img src="https://i.bmp.ovh/imgs/2019/07/f09a7fdfdc76b0ba.png" alt=""></p>
+<p>service 的 disabled 和 enabled 状态都好理解，static 是个啥？在不存在的网站上一顿查找，找到如下这番解释：</p>
+<p>&quot;static&quot; means &quot;enabled because something else wants it&quot;. Think by analogy to pacman's package install reasons:</p>
+<ul>
+<li>enabled :: explicitly installed</li>
+<li>static :: installed as dependency</li>
+<li>disabled :: not installed</li>
+</ul>
+<p>意思是，状态为 static 的服务，是作为别的服务的依赖而存在。</p>
+<h2 id="reference">reference</h2>
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=147964">https://bbs.archlinux.org/viewtopic.php?id=147964</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别]]></title>
+        <id>https://edwardzjl.github.io//post/javaxpersistenceid-he-orgspringframeworkdataannotationid-de-qu-bie</id>
+        <link href="https://edwardzjl.github.io//post/javaxpersistenceid-he-orgspringframeworkdataannotationid-de-qu-bie">
+        </link>
+        <updated>2019-06-27T05:49:07.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="orgspringframeworkdataannotationid">org.springframework.data.annotation.Id</h2>
+<p>org.springframework.data.annotation.Id 是 Spring 定义的 annotation，用来支持“没有像 JPA 那样的持久化 API”的非关系型数据库或是框架的持久化，因此它常被用于其它 spring-data 项目，例如 spring-data-mongodb 和 spring-data-solr 等。</p>
+<h2 id="javaxpersistenceid">javax.persistence.Id</h2>
+<p>javax.persistence.Id 是由 JPA 定义的 annotation，记住 JPA 仅适用于关系数据的管理。</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/39643960/whats-the-difference-between-javax-persistence-id-and-org-springframework-data">https://stackoverflow.com/questions/39643960/whats-the-difference-between-javax-persistence-id-and-org-springframework-data</a></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Install postgres on OSX]]></title>
+        <id>https://edwardzjl.github.io//post/install-postgres-on-osx</id>
+        <link href="https://edwardzjl.github.io//post/install-postgres-on-osx">
+        </link>
+        <updated>2019-04-13T07:07:03.000Z</updated>
+        <content type="html"><![CDATA[<p>If you installed Postgres from homebrew, the default user 'postgres' isn't automatically created, you need to run following command in your terminal:</p>
+<pre><code class="language-bash">/Applications/Postgres.app/Contents/Versions/9.*/bin/createuser -s postgres
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[gitalk test]]></title>
         <id>https://edwardzjl.github.io//post/gitalk-test</id>

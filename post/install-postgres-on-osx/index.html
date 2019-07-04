@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gridea</title>
+<title>Install postgres on OSX | Gridea</title>
 <link rel="shortcut icon" href="https://edwardzjl.github.io//favicon.ico?v=1562234269289">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -70,78 +70,67 @@
   </div>
 </div>
 
-    
-        
 
-<div class="archives-container">
-  
-    <h2 class="year">2019</h2>
-    
-      
-        <article class="post">
-          <a href="https://edwardzjl.github.io//post/xi-tong-zhong-zhuang-tai-wei-static-de-fu-wu">
-            <h2 class="post-title">
-              系统中状态为 static 的服务
-              <small>2019-07-04</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://edwardzjl.github.io//post/javaxpersistenceid-he-orgspringframeworkdataannotationid-de-qu-bie">
-            <h2 class="post-title">
-              [译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别
-              <small>2019-06-27</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://edwardzjl.github.io//post/install-postgres-on-osx">
+        <div class="post-detail">
+          <article class="post">
             <h2 class="post-title">
               Install postgres on OSX
-              <small>2019-04-13</small>
             </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://edwardzjl.github.io//post/gitalk-test">
-            <h2 class="post-title">
-              gitalk test
-              <small>2019-04-10</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://edwardzjl.github.io//post/vim-80-jian-qie-ban-she-zhi">
-            <h2 class="post-title">
-              vim 8.0 剪切板设置
-              <small>2019-03-14</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-  
-</div>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-04-13 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>If you installed Postgres from homebrew, the default user 'postgres' isn't automatically created, you need to run following command in your terminal:</p>
+<pre><code class="language-bash">/Applications/Postgres.app/Contents/Versions/9.*/bin/createuser -s postgres
+</code></pre>
 
-    
-        <div class="pagination-container">
-  
-  
-</div>
+            </div>
+          </article>
+        </div>
 
-    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://edwardzjl.github.io//post/gitalk-test">
+              <h3 class="post-title">
+                gitalk test
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '41baecfa03f7b355e235',
+    clientSecret: 'a87fa68869b6dbd1f687c814179e50dca2b8c94b',
+    repo: 'edwardzjl.github.io',
+    owner: 'edwardzjl',
+    admin: ['edwardzjl'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
         <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
   <a class="rss" href="https://edwardzjl.github.io//atom.xml" target="_blank">RSS</a>

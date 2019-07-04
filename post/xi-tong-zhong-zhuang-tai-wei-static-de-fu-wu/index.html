@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>系统中状态为 static 的服务 | Gridea</title>
 <link rel="shortcut icon" href="https://edwardzjl.github.io//favicon.ico?v=1562234269289">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,22 +74,44 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              系统中状态为 static 的服务
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2019-07-04 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <p>最近开始接触 Linux 运维的工作，第一件事情就是看看系统中跑了多少服务。</p>
+<p>集群用的是 CentOS 7，可以通过 <code>bash systemctl list-unit-files</code> 这个命令查看所有服务，敲下回车后打印出来这么一堆玩应儿：</p>
+<!-- more -->
+<p><img src="https://i.bmp.ovh/imgs/2019/07/f09a7fdfdc76b0ba.png" alt=""></p>
+<p>service 的 disabled 和 enabled 状态都好理解，static 是个啥？在不存在的网站上一顿查找，找到如下这番解释：</p>
+<p>&quot;static&quot; means &quot;enabled because something else wants it&quot;. Think by analogy to pacman's package install reasons:</p>
+<ul>
+<li>enabled :: explicitly installed</li>
+<li>static :: installed as dependency</li>
+<li>disabled :: not installed</li>
+</ul>
+<p>意思是，状态为 static 的服务，是作为别的服务的依赖而存在。</p>
+<h2 id="reference">reference</h2>
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=147964">https://bbs.archlinux.org/viewtopic.php?id=147964</a></p>
 
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://edwardzjl.github.io//post/javaxpersistenceid-he-orgspringframeworkdataannotationid-de-qu-bie">
+              <h3 class="post-title">
+                [译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别
+              </h3>
+            </a>
+          </div>
         
 
         

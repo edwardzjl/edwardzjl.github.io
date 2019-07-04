@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>[译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别 | Gridea</title>
 <link rel="shortcut icon" href="https://edwardzjl.github.io//favicon.ico?v=1562234269289">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,22 +74,38 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              [译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2019-06-27 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <h2 id="orgspringframeworkdataannotationid">org.springframework.data.annotation.Id</h2>
+<p>org.springframework.data.annotation.Id 是 Spring 定义的 annotation，用来支持“没有像 JPA 那样的持久化 API”的非关系型数据库或是框架的持久化，因此它常被用于其它 spring-data 项目，例如 spring-data-mongodb 和 spring-data-solr 等。</p>
+<h2 id="javaxpersistenceid">javax.persistence.Id</h2>
+<p>javax.persistence.Id 是由 JPA 定义的 annotation，记住 JPA 仅适用于关系数据的管理。</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/39643960/whats-the-difference-between-javax-persistence-id-and-org-springframework-data">https://stackoverflow.com/questions/39643960/whats-the-difference-between-javax-persistence-id-and-org-springframework-data</a></li>
+</ul>
 
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://edwardzjl.github.io//post/install-postgres-on-osx">
+              <h3 class="post-title">
+                Install postgres on OSX
+              </h3>
+            </a>
+          </div>
         
 
         
