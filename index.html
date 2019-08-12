@@ -1,203 +1,222 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gridea</title>
-<link rel="shortcut icon" href="https://edwardzjl.github.io//favicon.ico?v=1565329887553">
+    <meta charset="utf-8" >
+
+<title>巴啦啦</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://edwardzjl.github.io//favicon.ico?v=1565584015445">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://edwardzjl.github.io//styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://edwardzjl.github.io/">
-  <img class="avatar" src="https://edwardzjl.github.io//images/avatar.png?v=1565329887553" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
+    <div id="app" class="main">
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://edwardzjl.github.io//post/yi-json-ge-shi-zuo-wei-pei-zhi-wen-jian-de-que-dian">
-        <h2 class="post-title">[译]JSON格式作为配置文件的缺点</h2>
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://edwardzjl.github.io/">
+        <img src="https://edwardzjl.github.io//images/avatar.png?v=1565584015445" class="site-logo">
+        <h1 class="site-title">巴啦啦</h1>
       </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-08-09 ·
-        </time>
-        
-          <a href="https://edwardzjl.github.io//tag/dRpK6jD9GY" class="post-tag">
-            # 翻译
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>翻译自<a href="https://arp242.net/json-config.html">这篇文章</a></p>
-<p>我最近接触到许多项目将 JSON 用作配置文件。我认为这不是一个好主意。</p>
-
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://edwardzjl.github.io//post/xi-tong-zhong-zhuang-tai-wei-static-de-fu-wu">
-        <h2 class="post-title">系统中状态为 static 的服务</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-07-04 ·
-        </time>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>最近开始接触 Linux 运维的工作，第一件事情就是看看系统中跑了多少服务。</p>
-<p>集群用的是 CentOS 7，可以通过 <code>bash systemctl list-unit-files</code> 这个命令查看所有服务，敲下回车后打印出来这么一堆玩应儿：</p>
-
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://edwardzjl.github.io//post/javaxpersistenceid-he-orgspringframeworkdataannotationid-de-qu-bie">
-        <h2 class="post-title">[译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-06-27 ·
-        </time>
-        
-      </div>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://edwardzjl.github.io//post/install-postgres-on-osx">
-        <h2 class="post-title">Install postgres on OSX</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-04-13 ·
-        </time>
-        
-      </div>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://edwardzjl.github.io//post/gitalk-test">
-        <h2 class="post-title">gitalk test</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-04-10 ·
-        </time>
-        
-      </div>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://edwardzjl.github.io//post/vim-80-jian-qie-ban-she-zhi">
-        <h2 class="post-title">vim 8.0 剪切板设置</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-03-14 ·
-        </time>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>通过 ubuntu 和 centos 的源安装的 vim 版本较老（好像是7.4.x）</p>
-<p>8.0 之后的 vim，官网推荐的安装方式是从 git clone 源码编译</p>
-
-      </di>
-    </article>
-  
-</div>
-
-    
-        <div class="pagination-container">
-  
-  
-</div>
-
-    
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://edwardzjl.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
       </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://edwardzjl.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://edwardzjl.github.io//post/yi-json-ge-shi-zuo-wei-pei-zhi-wen-jian-de-que-dian">
+                  <h2 class="post-title">[译]JSON格式作为配置文件的缺点</h2>
+                </a>
+                <div class="post-date">
+                  2019-08-09
+                </div>
+                <div class="post-abstract">
+                  <p>翻译自<a href="https://arp242.net/json-config.html">这篇文章</a></p>
+<p>我最近接触到许多项目将 JSON 用作配置文件。我认为这不是一个好主意。</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://edwardzjl.github.io//post/xi-tong-zhong-zhuang-tai-wei-static-de-fu-wu">
+                  <h2 class="post-title">系统中状态为 static 的服务</h2>
+                </a>
+                <div class="post-date">
+                  2019-07-04
+                </div>
+                <div class="post-abstract">
+                  <p>最近开始接触 Linux 运维的工作，第一件事情就是看看系统中跑了多少服务。</p>
+<p>集群用的是 CentOS 7，可以通过 <code>bash systemctl list-unit-files</code> 这个命令查看所有服务，敲下回车后打印出来这么一堆玩应儿：</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://edwardzjl.github.io//post/javaxpersistenceid-he-orgspringframeworkdataannotationid-de-qu-bie">
+                  <h2 class="post-title">[译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别</h2>
+                </a>
+                <div class="post-date">
+                  2019-06-27
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://edwardzjl.github.io//post/install-postgres-on-osx">
+                  <h2 class="post-title">Install postgres on OSX</h2>
+                </a>
+                <div class="post-date">
+                  2019-04-13
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://edwardzjl.github.io//post/gitalk-test">
+                  <h2 class="post-title">gitalk test</h2>
+                </a>
+                <div class="post-date">
+                  2019-04-10
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://edwardzjl.github.io//post/vim-80-jian-qie-ban-she-zhi">
+                  <h2 class="post-title">vim 8.0 剪切板设置</h2>
+                </a>
+                <div class="post-date">
+                  2019-03-14
+                </div>
+                <div class="post-abstract">
+                  <p>通过 ubuntu 和 centos 的源安装的 vim 版本较老（好像是7.4.x）</p>
+<p>8.0 之后的 vim，官网推荐的安装方式是从 git clone 源码编译</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>
