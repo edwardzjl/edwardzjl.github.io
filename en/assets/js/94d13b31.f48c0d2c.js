@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkedwardzjl_github_io=self.webpackChunkedwardzjl_github_io||[]).push([[6983],{380:function(e){e.exports=JSON.parse('{"label":"vim","permalink":"/en/blog/tags/vim","allTagsPath":"/en/blog/tags","count":1}')}}]);
