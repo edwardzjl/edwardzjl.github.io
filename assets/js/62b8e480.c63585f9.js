@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkedwardzjl_github_io=self.webpackChunkedwardzjl_github_io||[]).push([[6677],{2858:s=>{s.exports=JSON.parse('{"label":"postgres","permalink":"/blog/tags/postgres","allTagsPath":"/blog/tags","count":1}')}}]);
