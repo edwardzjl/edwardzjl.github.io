@@ -26,6 +26,14 @@ export default {
     locales: ['en', 'zh-Hans'],
   },
 
+  markdown: {
+    mdx1Compat: {
+      comments: false,
+      admonitions: false,
+      headingIds: true,
+    },
+  },
+
   presets: [
     [
       'classic',
