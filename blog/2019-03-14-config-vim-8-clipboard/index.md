@@ -13,7 +13,7 @@ tags: [vim]
 
 在编译时增加 clip board support 需要的最小依赖为 `xorg header files` 和 `x11 dbus`
 
-在 <https://packages.ubuntu.com> 里一通搜索发现 `xorg header files` 是在 `libx11-dev` 这个包里，而 `x11 dbus` 在 `dbus-x11`
+在 [https://packages.ubuntu.com](https://packages.ubuntu.com) 里一通搜索发现 `xorg header files` 是在 `libx11-dev` 这个包里，而 `x11 dbus` 在 `dbus-x11`
 
 因此整个编译过程如下：
 
