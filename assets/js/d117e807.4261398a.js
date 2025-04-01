@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkedwardzjl_github_io=self.webpackChunkedwardzjl_github_io||[]).push([[6654],{6104:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/vim","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
