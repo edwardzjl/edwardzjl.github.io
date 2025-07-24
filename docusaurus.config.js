@@ -1,22 +1,23 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 
 
-export default {
+const config = {
   title: 'Edwardzjl',
   tagline: '温故而知新',
+  favicon: 'img/favicon.ico',
+
   url: 'https://edwardzjl.github.io',
   baseUrl: '/',
+  trailingSlash: false,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'edwardzjl', // Usually your GitHub org/user name.
   projectName: 'edwardzjl.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
-
-  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -38,14 +39,9 @@ export default {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/edwardzjl/edwardzjl.github.io/blob/main/',
-        },
+        docs: false,
         blog: {
+          routeBasePath: '/', // Serve the blog at the site's root
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -53,7 +49,7 @@ export default {
             'https://github.com/edwardzjl/edwardzjl.github.io/blob/main/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
       },
     ],
@@ -73,7 +69,7 @@ export default {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/edwardzjl/edwardzjl.github.io',
           label: 'GitHub',
@@ -89,7 +85,7 @@ export default {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: '/',
             },
             {
               label: 'GitHub',
@@ -106,3 +102,5 @@ export default {
     },
   },
 };
+
+export default config;
