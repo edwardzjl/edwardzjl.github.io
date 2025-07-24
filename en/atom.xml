@@ -106,18 +106,25 @@
         <category label="osx" term="osx"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[vim 8.0 剪切板设置]]></title>
+        <title type="html"><![CDATA[Ubuntu / CentOS 编译安装带剪贴板支持的 Vim]]></title>
         <id>https://edwardzjl.github.io/en/config-vim-8-clipboard</id>
         <link href="https://edwardzjl.github.io/en/config-vim-8-clipboard"/>
         <updated>2019-03-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[通过 ubuntu 和 centos 的源安装的 vim 版本较老（好像是7.4.x）]]></summary>
-        <content type="html"><![CDATA[<p>通过 <code>ubuntu</code> 和 <code>centos</code> 的源安装的 <code>vim</code> 版本较老（好像是7.4.x）</p>
-<p>8.0 之后的 <code>vim</code>，官网推荐的安装方式是从 git clone 源码编译</p>
-<p>默认编译出来的 <code>vim</code> 是没有 clipboard support 的，无法通过寄存器与系统剪切板进行交互</p>
-<p>在编译时增加 clip board support 需要的最小依赖为 <code>xorg header files</code> 和 <code>x11 dbus</code></p>
-<p>在 <a href="https://packages.ubuntu.com/" target="_blank" rel="noopener noreferrer">https://packages.ubuntu.com</a> 里一通搜索发现 <code>xorg header files</code> 是在 <code>libx11-dev</code> 这个包里，而 <code>x11 dbus</code> 在 <code>dbus-x11</code></p>
-<p>因此整个编译过程如下：</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt-get install libx11-dev dbus-x11</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./configure --with-features=huge</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">make</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo make install</span><br></span></code></pre></div></div>]]></content>
+        <summary type="html"><![CDATA[通过 Ubuntu 或 CentOS 系统自带的软件源安装 Vim，往往只能得到较旧的版本（通常是 7.4.x）。而从 Vim 8.0 开始，官网推荐的安装方式是通过 Git 克隆源码自行编译。]]></summary>
+        <content type="html"><![CDATA[<p>通过 Ubuntu 或 CentOS 系统自带的软件源安装 Vim，往往只能得到较旧的版本（通常是 7.4.x）。而从 Vim 8.0 开始，官网推荐的安装方式是通过 Git 克隆源码自行编译。</p>
+<p>不过需要注意，<strong>默认编译出来的 Vim 并不包含剪贴板支持（clipboard support）</strong>，因此无法与系统剪贴板交互（例如复制粘贴到其他程序）。</p>
+<p>要在编译时启用剪贴板支持，至少需要两个依赖包：</p>
+<ul>
+<li><code>libx11-dev</code>：提供 Xorg 的头文件（xorg header files）</li>
+<li><code>dbus-x11</code>：提供 X11 的 D-Bus 支持</li>
+</ul>
+<p>你可以在 <a href="https://packages.ubuntu.com/" target="_blank" rel="noopener noreferrer">https://packages.ubuntu.com</a> 搜索具体的依赖项位置，最终确认这两个包就是我们所需的。</p>
+<p>安装依赖并编译 Vim 的完整流程如下：</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt-get install libx11-dev dbus-x11</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/vim/vim.git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cd vim</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">./configure --with-features=huge --enable-gui=auto --enable-cscope --prefix=/usr/local</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">make</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo make install</span><br></span></code></pre></div></div>
+<blockquote>
+<p>其中 <code>--with-features=huge</code> 启用几乎所有功能，<code>--enable-gui=auto</code> 可选启用 GUI 模式（如 gvim），<code>--enable-cscope</code> 则用于增强代码导航功能。</p>
+</blockquote>
+<p>安装完成后，你可以使用 <code>vim --version</code> 检查是否启用了 <code>+clipboard</code>，确认剪贴板支持是否生效。</p>]]></content>
         <author>
             <name>Junlin Zhou</name>
             <uri>https://github.com/edwardzjl</uri>
