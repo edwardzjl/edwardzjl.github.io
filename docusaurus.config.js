@@ -58,6 +58,7 @@ const config = {
       },
       items: [
         { to: '/', label: 'Blog', position: 'left' },
+        { to: '/tags', label: 'Tags', position: 'left' },
         {
           href: 'https://github.com/edwardzjl/edwardzjl.github.io',
           label: 'GitHub',
