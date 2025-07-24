@@ -29,7 +29,7 @@ const config = {
 
   markdown: {
     mdx1Compat: {
-      comments: false,
+      comments: true,
       admonitions: false,
       headingIds: true,
     },
