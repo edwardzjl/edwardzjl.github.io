@@ -13,6 +13,7 @@ tags: [spring, java]
 
 `javax.persistence.Id` 是由 JPA 定义的 annotation，JPA 仅适用于关系数据的管理。
 
+<!-- truncate -->
 
 ## Ref
 

@@ -7,6 +7,8 @@ tags: [linux]
 
 最近开始接触 Linux 运维的工作，第一件事情就是看看系统中跑了多少服务。
 
+<!-- truncate -->
+
 集群用的是 CentOS 7，可以通过 ```bash systemctl list-unit-files``` 这个命令查看所有服务，敲下回车后打印出来这么一堆玩应儿：
 
 ![services](./services.png "services")
