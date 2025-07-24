@@ -9,6 +9,8 @@ tags: [vim]
 
 不过需要注意，**默认编译出来的 Vim 并不包含剪贴板支持（clipboard support）**，因此无法与系统剪贴板交互（例如复制粘贴到其他程序）。
 
+<!-- truncate -->
+
 要在编译时启用剪贴板支持，至少需要两个依赖包：
 
 * `libx11-dev`：提供 Xorg 的头文件（xorg header files）
