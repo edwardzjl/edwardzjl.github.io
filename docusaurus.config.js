@@ -93,6 +93,23 @@ const config = {
             },
           ],
         },
+        {
+          title: 'Feed',
+          items: [
+            {
+              label: 'RSS',
+              to: 'https://edwardzjl.github.io/rss.xml',
+            },
+            {
+              label: 'Atom',
+              href: 'https://edwardzjl.github.io/atom.xml',
+            },
+            {
+              label: 'JSON',
+              href: 'https://edwardzjl.github.io/feed.json',
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
