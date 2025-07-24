@@ -104,10 +104,6 @@ const config = {
               label: 'Atom',
               href: 'https://edwardzjl.github.io/atom.xml',
             },
-            {
-              label: 'JSON',
-              href: 'https://edwardzjl.github.io/feed.json',
-            },
           ],
         },
       ],
