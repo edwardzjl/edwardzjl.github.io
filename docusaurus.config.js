@@ -57,33 +57,17 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/', label: 'Blog', position: 'left' },
-        { to: '/tags', label: 'Tags', position: 'left' },
+        { label: 'Home', position: 'left', to: '/' },
+        { label: 'Tags', position: 'left', to: '/tags' },
         {
-          href: 'https://github.com/edwardzjl/edwardzjl.github.io',
           label: 'GitHub',
           position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/edwardzjl/edwardzjl.github.io',
-            },
-          ],
+          href: 'https://github.com/edwardzjl/edwardzjl.github.io',
         },
         {
-          title: 'Feed',
+          label: 'Feed',
+          position: 'right',
+          type: 'dropdown',
           items: [
             {
               label: 'RSS',
@@ -91,12 +75,23 @@ const config = {
             },
             {
               label: 'Atom',
-              href: 'https://edwardzjl.github.io/atom.xml',
+              to: 'https://edwardzjl.github.io/atom.xml',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    footer: {
+      style: 'dark',
+      // links: [
+      //   {
+      //     title: 'More',
+      //     items: [
+      //       { label: 'Blog', to: '/' },
+      //     ],
+      //   },
+      // ],
+      copyright: `Copyright © ${new Date().getFullYear()} Junlin Zhou. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
