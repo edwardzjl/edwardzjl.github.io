@@ -162,71 +162,73 @@ By running the following command, we can distribute the training job across mult
 
 Oh, and don't forget to set up `wandb` for logging — we're doing proper fine-tuning now! 😉
 
-<details><summary>sft2.sh</summary>
+<details>
+    <summary>sft2.sh</summary>
 
-```sh
-torchrun \
-  --nproc_per_node 8 \
-  sft.py \
-  --model_name_or_path Qwen/Qwen2.5-3B \
-  --dataset_name BAAI/Infinity-Instruct \
-  --dataset_config 0625 \
-  --do_train \
-  --learning_rate 1e-5 \
-  --lr_scheduler_type cosine_with_min_lr \
-  --lr_scheduler_kwargs "{\"min_lr\": 0}" \
-  --warmup_steps 40 \
-  --weight_decay 0.0 \
-  --max_grad_norm 1.0 \
-  --adam_beta1 0.9 \
-  --adam_beta2 0.95 \
-  --per_device_train_batch_size 11 \
-  --gradient_accumulation_steps 6 \
-  --gradient_checkpointing \
-  --gradient_checkpointing_kwargs "{\"use_reentrant\": false}" \
-  --num_train_epochs 3 \
-  --use_liger \
-  --deepspeed ./ds-config.json \
-  --output_dir /tmp/Qwen2.5-3B-Infinity-Instruct-0625 \
-  --report_to wandb \
-  --run_name my-second-sft-exp
-```
+    ```sh
+    torchrun \
+    --nproc_per_node 8 \
+    sft.py \
+    --model_name_or_path Qwen/Qwen2.5-3B \
+    --dataset_name BAAI/Infinity-Instruct \
+    --dataset_config 0625 \
+    --do_train \
+    --learning_rate 1e-5 \
+    --lr_scheduler_type cosine_with_min_lr \
+    --lr_scheduler_kwargs "{\"min_lr\": 0}" \
+    --warmup_steps 40 \
+    --weight_decay 0.0 \
+    --max_grad_norm 1.0 \
+    --adam_beta1 0.9 \
+    --adam_beta2 0.95 \
+    --per_device_train_batch_size 11 \
+    --gradient_accumulation_steps 6 \
+    --gradient_checkpointing \
+    --gradient_checkpointing_kwargs "{\"use_reentrant\": false}" \
+    --num_train_epochs 3 \
+    --use_liger \
+    --deepspeed ./ds-config.json \
+    --output_dir /tmp/Qwen2.5-3B-Infinity-Instruct-0625 \
+    --report_to wandb \
+    --run_name my-second-sft-exp
+    ```
 
 </details>
 
-<details><summary>ds-config.json</summary>
+<details>
+    <summary>ds-config.json</summary>
 
-```json
-{
-    "fp16": {
-        "enabled": false
-    },
-    "optimizer": {
-        "type": "AdamW",
-        "params": {
-            "lr": "auto",
-            "betas": "auto",
-            "eps": "auto",
-            "weight_decay": "auto"
-        }
-    },
-    "zero_optimization": {
-        "stage": 2,
-        "overlap_comm": false,
-        "allgather_bucket_size": 5e8,
-        "reduce_bucket_size": "auto",
-        "allgather_partitions": true,
-        "reduce_scatter": true,
-        "contiguous_gradients": true,
-        "round_robin_gradients": true
-    },
-    "gradient_accumulation_steps": "auto",
-    "gradient_clipping": "auto",
-    "train_batch_size": "auto",
-    "train_micro_batch_size_per_gpu": "auto",
-    "wall_clock_breakdown": false
-}
-```
+    ```json
+    {
+        "fp16": {
+            "enabled": false
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "params": {
+                "lr": "auto",
+                "betas": "auto",
+                "eps": "auto",
+                "weight_decay": "auto"
+            }
+        },
+        "zero_optimization": {
+            "stage": 2,
+            "overlap_comm": false,
+            "allgather_bucket_size": 5e8,
+            "reduce_bucket_size": "auto",
+            "allgather_partitions": true,
+            "reduce_scatter": true,
+            "contiguous_gradients": true,
+            "round_robin_gradients": true
+        },
+        "gradient_accumulation_steps": "auto",
+        "gradient_clipping": "auto",
+        "train_batch_size": "auto",
+        "train_micro_batch_size_per_gpu": "auto",
+        "wall_clock_breakdown": false
+    }
+    ```
 
 </details>
 
