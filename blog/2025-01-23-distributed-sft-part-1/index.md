@@ -21,6 +21,8 @@ This series will walk you through my journey, starting with a simple local exper
 
 A quick note about myself: I'm a software development engineer who is fairly new to the field of deep learning. If these articles seem too basic for you, I appreciate your patience as I navigate this learning journey.
 
+<!-- truncate -->
+
 ## Prerequisites
 
 To follow this tutorial, you'll need a machine with at least one NVIDIA GPU. I ran the experiment on a V100 without encountering any memory issues. If your GPU has less than 32GB of VRAM, you may need to reduce the `per_device_train_batch_size` or consider using truncation (although this is not recommended) to prevent CUDA out-of-memory (OOM) errors.
