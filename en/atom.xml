@@ -108,12 +108,14 @@
         <category label="distributed-training" term="distributed-training"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[<译>JSON格式作为配置文件的缺点]]></title>
+        <title type="html"><![CDATA[[译] JSON格式作为配置文件的缺点]]></title>
         <id>https://edwardzjl.github.io/en/the-downsides-of-json-for-config-files</id>
         <link href="https://edwardzjl.github.io/en/the-downsides-of-json-for-config-files"/>
         <updated>2019-08-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[翻译自这篇文章]]></summary>
-        <content type="html"><![CDATA[<p>翻译自<a href="https://www.arp242.net/json-config.html" target="_blank" rel="noopener noreferrer" title="The downsides of JSON for config files">这篇文章</a></p>
+        <content type="html"><![CDATA[<blockquote>
+<p>翻译自<a href="https://www.arp242.net/json-config.html" target="_blank" rel="noopener noreferrer" title="The downsides of JSON for config files">这篇文章</a></p>
+</blockquote>
 <p>我最近接触到许多项目将 <code>JSON</code> 用作配置文件。我认为这不是一个好主意。</p>
 <p><code>JSON</code> 从设计之初就不是用于做配置文件的，这也不是它擅长的领域。<code>JSON</code> 的目标是 "轻量级数据交换格式", 同时具有 "易于人类读写", "易于代码解析和生成" 的特点。它在对 "人类而言的便利性" 和 "对机器而言的便利性" 之间取得了较好的平衡, 在许多应用场景下都是比 <code>XML</code> 更好的替代方案。</p>
 <p>然而，将 <code>JSON</code> 用于其他目的有点类似于说 "嘿，这把锤子非常适合钉钉子！我喜欢它！为什么不用它来拧螺丝！" 当然它不是完全不能用，只是不合适做这样的工作。</p>
@@ -170,7 +172,7 @@
         <category label="linux" term="linux"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[<译> javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别]]></title>
+        <title type="html"><![CDATA[[译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别]]></title>
         <id>https://edwardzjl.github.io/en/difference-between-javax.persistence.id-and-org.springframework.data.annotation.id</id>
         <link href="https://edwardzjl.github.io/en/difference-between-javax.persistence.id-and-org.springframework.data.annotation.id"/>
         <updated>2019-06-27T00:00:00.000Z</updated>
