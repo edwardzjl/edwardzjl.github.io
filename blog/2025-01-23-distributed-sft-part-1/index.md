@@ -38,9 +38,9 @@ torch
 
 ## Training
 
-The `trl` library offers some excellent example training scripts, and we'll start with this one: <https://github.com/huggingface/trl/blob/main/trl/scripts/sft.py>
+The `trl` library offers some excellent example training scripts, and we'll start with this one: https://github.com/huggingface/trl/blob/main/trl/scripts/sft.py
 
-Copy the script to your development machine (or notebook), select a base model, and pick an SFT dataset to run the experiment. For this experiment, I chose [Qwen/Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B) as the base model for its compact size, and [BAAI/Infinity-Instruct](https://huggingface.co/datasets/BAAI/Infinity-Instruct) as the SFT dataset (somehow randomly 😌). You can explore other interesting datasets here: <https://github.com/mlabonne/llm-datasets>.
+Copy the script to your development machine (or notebook), select a base model, and pick an SFT dataset to run the experiment. For this experiment, I chose [Qwen/Qwen2.5-0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B) as the base model for its compact size, and [BAAI/Infinity-Instruct](https://huggingface.co/datasets/BAAI/Infinity-Instruct) as the SFT dataset (somehow randomly 😌). You can explore other interesting datasets here: https://github.com/mlabonne/llm-datasets.
 
 ### Command-line Arguments
 
