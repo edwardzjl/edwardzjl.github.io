@@ -1,6 +1,5 @@
 ---
 slug: distributed-sft-part-1
-title: Distributed SFT Part 1: Starting Locally
 authors: [jlzhou]
 tags: [LLM, distributed-training]
 ---
