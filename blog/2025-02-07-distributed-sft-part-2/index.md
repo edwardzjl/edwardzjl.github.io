@@ -80,7 +80,7 @@ This way, you can effectively simulate a larger batch size without running into 
 
 Gradient checkpointing is a memory optimization technique that reduces memory usage by trading off computation. During training, a large portion of memory is used to store intermediate activations for backpropagation. Gradient checkpointing reduces this memory usage by selectively saving a subset of activations and recomputing the rest during the backward pass.
 
-Note: According to <https://pytorch.org/docs/stable/checkpoint.html>:
+Note: According to https://pytorch.org/docs/stable/checkpoint.html:
 
 > There are currently two checkpointing implementations available, determined by the `use_reentrant` parameter. It is recommended that you use `use_reentrant=False`.
 
@@ -288,6 +288,6 @@ lm_eval \
 
 ## Conclusion
 
-In this post, we’ve covered everything from the basic setup to advanced techniques for scaling large language models in a single-node, multi-GPU environment. By utilizing DeepSpeed and trl, we can efficiently fine-tune models like Qwen2-3B and beyond, even on hardware that would otherwise be unable to support such models. I've also uploaded the fine-tuned model to the Hugging Face model hub, so you can try it out for yourself: <https://huggingface.co/jlzhou/Qwen2.5-3B-Infinity-Instruct-0625>.
+In this post, we’ve covered everything from the basic setup to advanced techniques for scaling large language models in a single-node, multi-GPU environment. By utilizing DeepSpeed and trl, we can efficiently fine-tune models like Qwen2-3B and beyond, even on hardware that would otherwise be unable to support such models. I've also uploaded the fine-tuned model to the Hugging Face model hub, so you can try it out for yourself: https://huggingface.co/jlzhou/Qwen2.5-3B-Infinity-Instruct-0625.
 
 In the next part of this series, we’ll explore distributed training across multiple nodes, tackling more complex setups with multiple GPUs across different machines. Stay tuned!
