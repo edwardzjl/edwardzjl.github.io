@@ -1,9 +1,10 @@
 ---
 slug: difference-between-javax.persistence.id-and-org.springframework.data.annotation.id
-title: <译> javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别
 authors: [jlzhou]
 tags: [spring, java]
 ---
+
+# [译] javax.persistence.Id 和 org.springframework.data.annotation.Id 的区别
 
 ## org.springframework.data.annotation.Id
 

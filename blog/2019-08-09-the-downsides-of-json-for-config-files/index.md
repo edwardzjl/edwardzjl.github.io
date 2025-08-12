@@ -1,11 +1,12 @@
 ---
 slug: the-downsides-of-json-for-config-files
-title: <译>JSON格式作为配置文件的缺点
 authors: [jlzhou]
 tags: [json]
 ---
 
-翻译自[这篇文章][1]
+# [译] JSON格式作为配置文件的缺点
+
+> 翻译自[这篇文章][1]
 
 我最近接触到许多项目将 `JSON` 用作配置文件。我认为这不是一个好主意。
 

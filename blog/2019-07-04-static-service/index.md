@@ -1,9 +1,10 @@
 ---
 slug: static-service
-title: 系统中状态为 static 的服务
 authors: [jlzhou]
 tags: [linux]
 ---
+
+# 系统中状态为 static 的服务
 
 最近开始接触 Linux 运维的工作，第一件事情就是看看系统中跑了多少服务。
 

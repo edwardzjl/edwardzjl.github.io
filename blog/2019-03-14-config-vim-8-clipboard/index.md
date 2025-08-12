@@ -1,9 +1,10 @@
 ---
 slug: config-vim-8-clipboard
-title: Ubuntu / CentOS 编译安装带剪贴板支持的 Vim
 authors: [jlzhou]
 tags: [vim]
 ---
+
+# Ubuntu / CentOS 编译安装带剪贴板支持的 Vim
 
 通过 Ubuntu 或 CentOS 系统自带的软件源安装 Vim，往往只能得到较旧的版本（通常是 7.4.x）。而从 Vim 8.0 开始，官网推荐的安装方式是通过 Git 克隆源码自行编译。
 
