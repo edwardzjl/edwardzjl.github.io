@@ -12,6 +12,8 @@ tags: [LLM, distributed-training]
 
 Now, it's time to take the next step. In this post, we'll focus on scaling the SFT setup to handle larger tasks. Specifically, we'll explore how to fine-tune an LLM in a single-node, multi-GPU environment. Along the way, we'll discuss optimization techniques to reduce memory usage, speed up training, and enable fine-tuning of even larger models. Let's get started!
 
+<!-- truncate -->
+
 ## Prerequisites
 
 To follow along with this tutorial, you'll need a machine equipped with multiple NVIDIA GPUs. Ensure that the GPUs are connected via high-speed interconnects to minimize communication overhead. For reference, I ran this experiment using 8 NVIDIA V100 SXM2 GPUs.
