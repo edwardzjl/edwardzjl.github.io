@@ -6048,7 +6048,7 @@ __metadata:
     "@mdx-js/react": "npm:^3.1.1"
     clsx: "npm:^2.1.1"
     prism-react-renderer: "npm:^2.4.1"
-    react: "npm:^19.2.8"
+    react: "npm:^19.3.1"
     react-dom: "npm:^19.2.8"
   languageName: unknown
   linkType: soft
@@ -10990,10 +10990,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.2.8":
-  version: 19.2.8
-  resolution: "react@npm:19.2.8"
-  checksum: 10c0/5f86bdb56426652fd6d989d30a6f2e603c057272c47c9ca3a3fbe190a3a39ee9ccce937d63cfc039717abed1b8891d6a499134bc35311acc07eafdacd86537cd
+"react@npm:^19.3.1":
+  version: 19.3.1
+  resolution: "react@npm:19.3.1"
+  checksum: 10c0/f0ed036d1223562c09c8347858ca712733ea6e27a30db709ee9c3f3f176d3e9e767afce735d59956addf3d030102e256bba82dea635fc1bdb0e01107e98fef10
   languageName: node
   linkType: hard
 
